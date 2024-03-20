@@ -18,8 +18,19 @@ public class CalculatorApplication {
 		SpringApplication.run(CalculatorApplication.class, args);
 		System.out.println("Woohoo pirmoji spring boot aplikacija");
 	}
+	// http://localhost:8080/hello?name=Adomas&surname=Kasputis
+	// Metodo pavadinimas klaustukas (?) raktas, lygybe, reiksme. Optional jeigu daugiau nori reiksmiu simbolis & (and)
 	@GetMapping("/hello")
-	public String hello(@RequestParam(value = "name" , defaultValue = "World") String name) {
-		return String.format("Hello %s!", name);
+	public String hello(@RequestParam(value = "name" , defaultValue = "World") String name2, int age) {
+		return " Hello " + name2 + " metai: " + age;
 	}
-}
+	@GetMapping("/index")
+	public String index() {
+		return "<h1>Internetinis skaiciuotuvas. Atliks operacijas: </h1><br>" +
+				"&nbsp;&nbsp; sudeti <br>" +
+				"&nbsp;&nbsp; dauginti <br>" +
+				"&nbsp;&nbsp; dalinti <br>" +
+				"&nbsp;&nbsp; atimti <br>";
+	}
+	}
+
