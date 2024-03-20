@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 // Rementis priklausomybemis ( Jar bibliotekomis ) kurios programuotojas itraukia i projekta ( Pom.xml
 // Siuo atveju ji veikia kartu su main metodu.
 @EnableAutoConfiguration
-public class InternetinisSkaiciuotuvasController {
+public class CalulatorController {
     @RequestMapping(method = RequestMethod.GET, value = "/")
     public String hello () {
         return "Internetinis skaiciuotuvas<p>" +
